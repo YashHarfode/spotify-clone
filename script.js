@@ -252,17 +252,27 @@ document.getElementById("shuffleBtn").addEventListener("click", () => {
 });
 
 audio.addEventListener("ended", () => {
-    if (isRepeat) {
-        audio.currentTime = 0;
-        audio.play();
-    } else if (isShuffle) {
-        currentIndex = Math.floor(Math.random() * allSongs.length);
-        playSong(allSongs[currentIndex]);
-    } else {
-        playPauseIcon.src = "./svgs/play.svg";
-        isPlaying = false;
-    }
+  if (isRepeat) {
+    audio.currentTime = 0;
+    audio.play(); // ✅ sirf yahin chalega
+    return;
+  }
+
+  if (isShuffle) {
+    currentIndex = Math.floor(Math.random() * allSongs.length);
+    playSong(allSongs[currentIndex]);
+    return;
+  }
+
+  playPauseIcon.src = "./svgs/play.svg";
+  isPlaying = false;
 });
+
+audio.play().then(() => {
+  playPauseIcon.src = "./svgs/pause.svg";
+  isPlaying = true;
+});
+
 
 
 // Popular Artists – Circular UI + Play Button
@@ -294,3 +304,14 @@ card.querySelector(".artist-play-btn").addEventListener("click", function () {
   isPlaying = true;
   audio.play();
 });
+
+
+//Toast
+
+function showToast(msg) {
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.innerText = msg;
+  document.getElementById("toastContainer").appendChild(toast);
+  setTimeout(() => toast.remove(), 3000);
+}
