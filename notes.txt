@@ -1,0 +1,8 @@
+# svg spac:
+
+https://stackoverflow.com/questions/77729448/how-to-use-svg-parameters#:~:text=xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E
+
+or 
+xmlns="http://www.w3.org/2000/svg"
+
+

@@ -1,14 +1,14 @@
 [
   {
-    "title": "Zamaana Lage",
-    "artist": "Arijit Singh",
-    "cover": "https://yourcdn.com/images/zamaana.jpg",
-    "audio": "https://yourcdn.com/audio/zamaana.mp3"
+    "title": "Zamaana Lage (From..Metro in Dino)",
+    "artist": "Pritam,Arijit Singh",
+    "cover": "/spotify-data/images/zamaana.jpg",
+    "audio": "/spotify-data/audio/zamaana.mp3"
   },
   {
-    "title": "Kesariya",
-    "artist": "Arijit Singh",
-    "cover": "https://yourcdn.com/images/kesariya.jpg",
-    "audio": "https://yourcdn.com/audio/kesariya.mp3"
+    "title": "Muththa Mazhai (Reprise)",
+    "artist": "A.R. Rahman",
+    "cover": "/spotify-data/images/muththa.jpg",
+    "audio": "/spotify-data/audio/muththa.mp3"
   }
 ]

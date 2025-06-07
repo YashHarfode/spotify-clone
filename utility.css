@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --nav-bg-color: rgb(0, 0, 0);
+    --bg-gray-color: rgb(31, 31, 31);
+    /* --background-color: #f4f4f4; */
+}
+.border {
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.hidden {
+  display: none !important;
+}

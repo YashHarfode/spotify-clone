@@ -1,10 +1,12 @@
 [
   {
-    "name": "Arijit Singh",
-    "image": "https://yourcdn.com/images/arijit.jpg"
-  },
+  "name": "Pritam Singh",
+  "image": "./images/Pritam.jpg",
+  "audio": "./audio/apna bana le (Bhediya)[Arjit Singh].mp3"
+},
   {
     "name": "Shreya Ghoshal",
-    "image": "https://yourcdn.com/images/shreya.jpg"
+    "image": "./images/shreya.jpg",
+    "audio": "./audio/shreya.mp3"
   }
 ]

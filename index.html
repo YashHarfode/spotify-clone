@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <main>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><img class="logo invert" width="32px" src="/svgs/logo.svg" alt="Spotify Logo"></li>
+                    <li><img class="invert" width="24px" src="/svgs/home.svg" alt="Home"></li>
+                    <li><img class="invert" width="24px" src="/svgs/search.svg" alt="Search"></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container flex">
+            <div class="left border">
+                <div class="library">
+                    <h4>Your Library</h4>
+                    <div class="libra">
+
+                        <div class="lib-create-playlist lib-in">
+                            <h4>Create your first playlist</h4>
+                            <h5>It's easy we'll help you</h5>
+                            <button class="lib-btn">Create playlist</button>
+                        </div>
+
+                        <div class="lib-browse-podcasts lib-in">
+                            <h4>Let's find some podcasts to follow</h4>
+                            <h5>We'll keep you updated on new episodes</h5>
+                            <button class="lib-btn">Browse podcasts</button>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <ul class="link-list">
+                            <li><a href="https://www.spotify.com/jp/legal/">Legal</a></li>
+                            <li><a href="https://www.spotify.com/jp/privacy/">Safety & Privacy Center</a></li>
+                            <li><a href="https://www.spotify.com/jp/legal/privacy-policy/">Privacy Policy</a></li>
+                            <li><a href="https://www.spotify.com/jp/legal/cookies-policy/">Cookies</a></li>
+                            <li><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3">About Ads</a></li>
+                            <li><a href="https://www.spotify.com/jp/accessibility/">Accessibility</a></li>
+                        </ul>
+
+                        <div class="language-switcher">
+                            <img src="/svgs/language.svg" alt="Language Icon" />
+                            <span>English</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="right border">
+                <div class="spotify-playlist">
+                    <div class="trending-songs">
+                        <h1>Trending Songs</h1>
+                        <div class="card-container-trending" id="trendingSongs">
+                        </div>
+                    </div>
+                    <div class="popular-artists">
+                        <h1>Popular Artists</h1>
+                        <div class="card-container-artists" id="popularArtists"></div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <!-- ✅ Custom Bottom Music Player -->
+            <div class="music-player hidden" id="musicPlayer">
+                <img id="playerCover" src="" alt="cover" />
+
+                <div class="player-info">
+                    <h4 id="playerTitle">Song Title</h4>
+                    <p id="playerArtist">Artist Name</p>
+                </div>
+
+                
+                <div class="player-controls">
+                    
+                    <button id="shuffleBtn" title="Shuffle">
+                        <img src="./svgs/shuffle.svg" alt="shuffle" />
+                    </button>
+
+                    <button id="prevBtn">
+                        <img id="prevIcon" src="./svgs/previous.svg" alt="previous" />
+                    </button>
+
+                    <button id="playPauseBtn">
+                        <img id="playPauseIcon" src="./svgs/play.svg" alt="play" />
+                    </button>
+
+                    <button id="nextBtn">
+                        <img id="nextIcon" src="./svgs/next.svg" alt="next" />
+                    </button>
+                    
+                    <button id="repeatBtn" title="Repeat">
+                        <img src="./svgs/repeat.svg" alt="repeat" />
+                    </button>
+
+                    <span id="currentTime">0:00</span>
+                    <input type="range" id="progressBar" value="0" min="0" max="100">
+                    <span id="duration">0:00</span>
+
+                    <button id="muteBtn" title="Mute/Unmute">
+                        <img id="muteIcon" src="./svgs/volume.svg" alt="volume mute" />
+                    </button>
+
+
+
+
+
+
+                    <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1" title="Volume">
+                </div>
+                <!-- ✅ Hidden audio Tag -->
+                <audio id="audio"></audio>
+            </div>
+
+
+
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
