@@ -242,19 +242,22 @@ let isRepeat = false;
 let isShuffle = false;
 
 document.getElementById("repeatBtn").addEventListener("click", () => {
-    isRepeat = !isRepeat;
-    alert("Repeat: " + (isRepeat ? "On" : "Off"));
+  isRepeat = !isRepeat;
+  showToast("Repeat: " + (isRepeat ? "On 🔁" : "Off"));
 });
 
 document.getElementById("shuffleBtn").addEventListener("click", () => {
-    isShuffle = !isShuffle;
-    alert("Shuffle: " + (isShuffle ? "On" : "Off"));
+  isShuffle = !isShuffle;
+  showToast("Shuffle: " + (isShuffle ? "On 🔀" : "Off"));
 });
+
 
 audio.addEventListener("ended", () => {
   if (isRepeat) {
     audio.currentTime = 0;
-    audio.play(); // ✅ sirf yahin chalega
+    audio.play().then(() => {
+      playPauseIcon.src = "./svgs/pause.svg";
+    });
     return;
   }
 
@@ -268,6 +271,7 @@ audio.addEventListener("ended", () => {
   isPlaying = false;
 });
 
+
 audio.play().then(() => {
   playPauseIcon.src = "./svgs/pause.svg";
   isPlaying = true;
@@ -279,7 +283,7 @@ audio.play().then(() => {
 card.innerHTML = `
   <div class="artist-img-container">
     <img src="${artist.image}" alt="${artist.name}" />
-    <button class="artist-play-btn" 
+    <button class="artist-play-btn"
       data-audio="${artist.audio}"
       data-cover="${artist.image}"
       data-title="${artist.name} Song"
@@ -289,6 +293,7 @@ card.innerHTML = `
   </div>
   <h4 class="song-title">${artist.name}</h4>
 `;
+
 
 
 // Artist Play Button Logic
@@ -309,9 +314,12 @@ card.querySelector(".artist-play-btn").addEventListener("click", function () {
 //Toast
 
 function showToast(msg) {
+  const toastContainer = document.getElementById("toastContainer");
   const toast = document.createElement("div");
   toast.className = "toast";
   toast.innerText = msg;
-  document.getElementById("toastContainer").appendChild(toast);
+  toastContainer.appendChild(toast);
   setTimeout(() => toast.remove(), 3000);
 }
+
+
