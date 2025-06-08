@@ -352,3 +352,16 @@ const isHomepage = true;
 const maxCards = 10;
 
 const songsToRender = isHomepage ? songs.slice(0, maxCards) : songs;
+
+//
+document.getElementById("searchInput").addEventListener("input", function () {
+  const query = this.value.toLowerCase();
+  document.querySelectorAll("#trendingSongs .song-card").forEach(card => {
+    const title = card.querySelector(".song-title").textContent.toLowerCase();
+    card.style.display = title.includes(query) ? "block" : "none";
+  });
+});
+
+
+
+// Trending View All

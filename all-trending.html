@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trending Songs - View All</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Trending Songs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="all-trending.css" />
 </head>
+
 <body>
-    <h1>Trending Songs</h1>
-    <div class="card-container-trending">
-        <!-- Song cards will be dynamically inserted here -->
+  <header>
+    <h1>All Trending Songs</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search songs..." />
+      <button id="searchBtn">🔍</button>
     </div>
+  </header>
+
+  <main>
+    <div class="card-container" id="trendingSongs"></div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

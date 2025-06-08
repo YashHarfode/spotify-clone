@@ -613,13 +613,15 @@ body {
   position: absolute;
   right: 0;
   top: 40%;
-  background: rgba(0,0,0,0.6);
   border: none;
-  color: white;
-  padding: 5px 12px;
+  /* padding: 5px 12px; */
   font-size: 24px;
   cursor: pointer;
   z-index: 5;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 20%;
+
 }
 
 /* Search bar */
@@ -646,4 +648,18 @@ body {
 .search-bar img {
   width: 20px;
   filter: invert(1);
+}
+
+
+/* Scrolling Song Cards in Row */
+
+#trendingSongs {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 16px;
+  scroll-behavior: smooth;
+}
+#trendingSongs::-webkit-scrollbar {
+  display: none;
 }
