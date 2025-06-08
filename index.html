@@ -18,6 +18,18 @@
                     <li><img class="invert" width="24px" src="/svgs/home.svg" alt="Home"></li>
                     <li><img class="invert" width="24px" src="/svgs/search.svg" alt="Search"></li>
                 </ul>
+                <div>
+                    <h3>Premium Support Download</h3>
+                </div>
+                <div>
+                    <h3>Install App</h3>
+                </div>
+                <div>
+                    <h3>Sign Up</h3>
+                </div>
+                <div>
+                    <button id="logIn">Log In</button>
+                </div>
             </nav>
         </div>
 
@@ -44,15 +56,17 @@
                             <li><a href="https://www.spotify.com/jp/legal/">Legal</a></li>
                             <li><a href="https://www.spotify.com/jp/privacy/">Safety & Privacy Center</a></li>
                             <li><a href="https://www.spotify.com/jp/legal/privacy-policy/">Privacy Policy</a></li>
-                            <li><a href="https://www.spotify.com/jp/legal/cookies-policy/">Cookies</a></li>
                             <li><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3">About Ads</a></li>
                             <li><a href="https://www.spotify.com/jp/accessibility/">Accessibility</a></li>
                         </ul>
+                        <ul class="link-list" id="cookies">
+                            <li><a href="https://www.spotify.com/jp/legal/cookies-policy/">Cookies</a></li>
+                        </ul>
 
-                        <div class="language-switcher">
-                            <img src="/svgs/language.svg" alt="Language Icon" />
-                            <span>English</span>
-                        </div>
+                    </div>
+                    <div class="language-switcher">
+                        <img src="/svgs/language.svg" alt="Language Icon" />
+                        <span>English</span>
                     </div>
 
                 </div>
@@ -69,9 +83,64 @@
                         <div class="card-container-artists" id="popularArtists"></div>
                     </div>
 
+                    <!-- Footer Section -->
+    
+                    <div class="partition"></div>
+                    <section>
+                        <div>
+                            <div class="sectionHead">
+                                <h4>Companies</h4>
+                            </div>
+                            <ul>
+                                <li>About</li>
+                                <li>Jobs</li>
+                                <li>For the Records</li>
+                            </ul>
+                        </div>
 
+                        <div>
+                            <div class="sectionHead">
+                                <h4>Communities</h4>
+                            </div>
+                            <ul>
+                                <li>For Artists</li>
+                                <li>Devlopers</li>
+                                <li>Advertising</li>
+                                <li>Investors</li>
+                                <li>Vendors</li>
+                            </ul>
+                        </div>
 
+                        <div>
+                            <div class="sectionHead">
+                                <h4>Useful Links</h4>
+                            </div>
+                            <ul>
+                                <li>Support</li>
+                                <li>Free Mobile App</li>
+                                <li>Popular by Country</li>
+                            </ul>
+                        </div>
 
+                        <div>
+                            <div class="sectionHead">
+                                <h4>Spotify Plans</h4>
+                            </div>
+                            <ul>
+                                <li>Premium Individual</li>
+                                <li>Premium Duo</li>
+                                <li>Premium Students</li>
+                                <li>Premium Family</li>
+                                <li>Spotify Free</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <div class="partition"></div>
+                    <footer>
+                        <h4>Copyright Spotify AB and Yash</h4>
+                    </footer>
+
+                    <!-- Footer section -->
                 </div>
             </div>
 
@@ -84,7 +153,7 @@
                     <p id="playerArtist">Artist Name</p>
                 </div>
 
-                
+
                 <div class="player-controls">
 
                     <button id="shuffleBtn" title="Shuffle">
@@ -102,7 +171,7 @@
                     <button id="nextBtn">
                         <img id="nextIcon" src="./svgs/next.svg" alt="next" />
                     </button>
-                    
+
                     <button id="repeatBtn" title="Repeat">
                         <img src="./svgs/repeat.svg" alt="repeat" />
                     </button>
@@ -132,6 +201,9 @@
 
 
         </div>
+
+
+
     </main>
     <script src="script.js"></script>
 </body>
