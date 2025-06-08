@@ -149,23 +149,40 @@ muteBtn.addEventListener("click", () => {
 });
 
 async function loadPopularArtists() {
-    try {
-        const artists = await fetch(popularArtistsURL).then(res => res.json());
+  const res = await fetch('./spotify-data/popular-artists.json');
+  const artists = await res.json();
 
-        artists.forEach(artist => {
-            const card = document.createElement("div");
-            card.classList.add("song-card");
-            card.innerHTML = `
-        <div class="card-img-container">
-          <img src="${artist.image}" alt="${artist.name}" />
-        </div>
-        <h4 class="song-title">${artist.name}</h4>
-      `;
-            artistsContainer.appendChild(card);
-        });
-    } catch (err) {
-        console.error("Failed to load popular artists:", err);
-    }
+  artists.forEach(artist => {
+    const card = document.createElement("div");
+    card.classList.add("song-card");
+
+    card.innerHTML = `
+      <div class="artist-img-container">
+        <img src="${artist.image}" alt="${artist.name}" />
+        <button class="artist-play-btn"
+          data-audio="${artist.audio}"
+          data-cover="${artist.image}"
+          data-title="${artist.name} Song"
+          data-artist="${artist.name}">
+          <img src="./svgs/play.svg" />
+        </button>
+      </div>
+      <h4 class="song-title">${artist.name}</h4>
+    `;
+
+    card.querySelector(".artist-play-btn").addEventListener("click", function () {
+      audio.src = this.dataset.audio;
+      playerCover.src = this.dataset.cover;
+      playerTitle.textContent = this.dataset.title;
+      playerArtist.textContent = this.dataset.artist;
+
+      audio.play();
+      playPauseIcon.src = "./svgs/pause.svg";
+      document.getElementById("musicPlayer").classList.remove("hidden");
+    });
+
+    artistsContainer.appendChild(card);
+  });
 }
 
 loadPopularArtists();
