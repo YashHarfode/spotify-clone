@@ -362,6 +362,3 @@ document.getElementById("searchInput").addEventListener("input", function () {
   });
 });
 
-
-
-// Trending View All

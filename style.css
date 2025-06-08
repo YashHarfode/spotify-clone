@@ -656,8 +656,7 @@ body {
 #trendingSongs {
   display: flex;
   overflow-x: auto;
-  white-space: nowrap;
-  gap: 16px;
+  gap: 14px;
   scroll-behavior: smooth;
 }
 #trendingSongs::-webkit-scrollbar {
