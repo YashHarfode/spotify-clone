@@ -16,8 +16,15 @@
                 <ul>
                     <li><img class="logo invert" width="32px" src="/svgs/logo.svg" alt="Spotify Logo"></li>
                     <li><img class="invert" width="24px" src="/svgs/home.svg" alt="Home"></li>
-                    <li><img class="invert" width="24px" src="/svgs/search.svg" alt="Search"></li>
+                    <!-- <li><img class="invert" width="24px" src="/svgs/search.svg" alt="Search"></li> -->
                 </ul>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="What do you want to listen to?" />
+                    <img src="./svgs/search.svg" alt="search">
+                </div>
+
                 <div>
                     <h3>Premium Support Download</h3>
                 </div>
@@ -78,13 +85,28 @@
                         <div class="card-container-trending" id="trendingSongs">
                         </div>
                     </div>
+
+                    <!-- View All -->
+                    <div class="view-all">
+                        <a href="all-trending.html">View All →</a>
+                    </div>
+                    <!-- Scroll Wrapper -->
+                    <div class="scroll-wrapper">
+                        <button class="scroll-right-btn" onclick="scrollRight('trendingSongs')">➡️</button>
+                        <div class="card-container" id="trendingSongs">
+                            <!-- cards here -->
+                        </div>
+                    </div>
+
+
                     <div class="popular-artists">
                         <h1>Popular Artists</h1>
                         <div class="card-container-artists" id="popularArtists"></div>
                     </div>
 
+
                     <!-- Footer Section -->
-    
+
                     <div class="partition"></div>
                     <section>
                         <div>

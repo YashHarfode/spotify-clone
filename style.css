@@ -600,3 +600,50 @@ body {
 .right footer {
   padding: 20px;
 }
+
+
+
+/* Scroll */
+
+.scroll-wrapper {
+  position: relative;
+}
+
+.scroll-right-btn {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* Search bar */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 8px 16px;
+  border-radius: 30px;
+  width: 300px;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.search-bar img {
+  width: 20px;
+  filter: invert(1);
+}

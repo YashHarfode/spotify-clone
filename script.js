@@ -84,16 +84,15 @@ let isPlaying = false;
 
 
 playPauseBtn.addEventListener("click", () => {
-    if (isPlaying) {
-        audio.pause();
-        playPauseIcon.src = "./svgs/play.svg";
-        isPlaying = false;
-    } else {
-        audio.play();
-        playPauseIcon.src = "./svgs/pause.svg";
-        isPlaying = true;
-    }
+  if (audio.paused) {
+    audio.play();
+    playPauseIcon.src = "./svgs/pause.svg";
+  } else {
+    audio.pause();
+    playPauseIcon.src = "./svgs/play.svg";
+  }
 });
+
 
 
 // 📶 Progress Bar (Live Update)
@@ -340,3 +339,16 @@ function showToast(msg) {
 }
 
 
+// Scroll
+
+function scrollRight(containerId) {
+  const container = document.getElementById(containerId);
+  container.scrollBy({ left: 300, behavior: "smooth" });
+}
+
+// View all
+
+const isHomepage = true;
+const maxCards = 10;
+
+const songsToRender = isHomepage ? songs.slice(0, maxCards) : songs;
