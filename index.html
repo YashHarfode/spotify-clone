@@ -22,7 +22,7 @@
                 <!-- Search Bar -->
                 <div class="search-bar">
                     <input type="text" id="searchInput" placeholder="What do you want to listen to?" />
-                    <img src="./svgs/search.svg" alt="search">
+                    <img id="searchBtn" src="./svgs/search.svg" alt="search">
                 </div>
 
                 <div>
@@ -93,12 +93,15 @@
 
                     <!-- Scroll Wrapper -->
                     <div class="scroll-wrapper">
-                        <button class="scroll-right-btn" onclick="scrollRight('trendingSongs')"><img
-                                src="/svgs/right.svg" alt="right"></button>
+                        <button class="scroll-left-btn" onclick="scrollLeft('trendingSongs')">⬅️</button>
+
                         <div class="card-container" id="trendingSongs">
-                            <!-- cards here -->
+                            <!-- Dynamically added cards -->
                         </div>
+
+                        <button class="scroll-right-btn" onclick="scrollRight('trendingSongs')">➡️</button>
                     </div>
+
 
 
                     <div class="popular-artists">

@@ -403,6 +403,17 @@ body {
   transform: scale(1.2);
 }
 
+#popularArtists {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  scroll-behavior: smooth;
+}
+#popularArtists::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 
 .music-player {
@@ -607,22 +618,45 @@ body {
 
 .scroll-wrapper {
   position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-left-btn,
+.scroll-right-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* default hidden */
+  z-index: 25;
+}
+
+.scroll-left-btn {
+  left: 0;
 }
 
 .scroll-right-btn {
-  position: absolute;
   right: 0;
-  top: 40%;
-  border: none;
-  /* padding: 5px 12px; */
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 5;
-  background-color: transparent;
-  border: 2px solid black;
-  border-radius: 20%;
-
 }
+
+
 
 /* Search bar */
 
@@ -652,7 +686,7 @@ body {
 
 
 /* Scrolling Song Cards in Row */
-/*  CTF For Chatgpt ye niche likha hua code me gad bad hai ki kya pata nahi mera home page me trending Song ke cards pata nahi chhote ho jaarahe thik karna hai. */
+
 #trendingSongs {
   display: flex;
   overflow-x: auto;

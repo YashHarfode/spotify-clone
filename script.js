@@ -341,10 +341,53 @@ function showToast(msg) {
 
 // Scroll
 
+function scrollLeft(containerId) {
+  const container = document.getElementById(containerId);
+  container.scrollBy({ left: -300, behavior: 'smooth' });
+  setTimeout(() => updateScrollButtons(containerId), 400);
+}
+
 function scrollRight(containerId) {
   const container = document.getElementById(containerId);
-  container.scrollBy({ left: 300, behavior: "smooth" });
+  container.scrollBy({ left: 300, behavior: 'smooth' });
+  setTimeout(() => updateScrollButtons(containerId), 400);
 }
+
+function updateScrollButtons(containerId) {
+  const container = document.getElementById(containerId);
+  const wrapper = container.closest('.scroll-wrapper');
+
+  const leftBtn = wrapper.querySelector('.scroll-left-btn');
+  const rightBtn = wrapper.querySelector('.scroll-right-btn');
+
+  const scrollLeft = container.scrollLeft;
+  const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+  // Show or hide left button
+  if (scrollLeft > 10) {
+    leftBtn.style.display = 'block';
+  } else {
+    leftBtn.style.display = 'none';
+  }
+
+  // Show or hide right button
+  if (scrollLeft < maxScrollLeft - 10) {
+    rightBtn.style.display = 'block';
+  } else {
+    rightBtn.style.display = 'none';
+  }
+}
+
+// ✅ Hook scroll event to auto-update button visibility
+document.addEventListener('DOMContentLoaded', () => {
+  const trendingContainer = document.getElementById('trendingSongs');
+
+  if (trendingContainer) {
+    trendingContainer.addEventListener('scroll', () => updateScrollButtons('trendingSongs'));
+    updateScrollButtons('trendingSongs'); // initial check
+  }
+});
+
 
 // View all
 
