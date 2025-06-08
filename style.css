@@ -652,7 +652,7 @@ body {
 
 
 /* Scrolling Song Cards in Row */
-
+/*  CTF For Chatgpt ye niche likha hua code me gad bad hai ki kya pata nahi mera home page me trending Song ke cards pata nahi chhote ho jaarahe thik karna hai. */
 #trendingSongs {
   display: flex;
   overflow-x: auto;
